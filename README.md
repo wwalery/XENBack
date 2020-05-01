@@ -1,5 +1,4 @@
-# XENBack by Walery Wysotsky <xenback@wysotsky.info>
-
+# XENBack by Walery Wysotsky 
 
 Citrix Xenserver Guests Virtual Machines backup. 
 Different way configuration, jobs, logging, email report in html etc.
