@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+#Sample Job File
+
+use vars qw(%config %job);
+
+%job = (
+
+ jobName => "Backup by tag [backup]",
+
+ type => "tag",
+
+ Selected => ['backup'],
+ 
+ saveMAC => true,
+ 
+# backup host configuration and software
+ backupHost => false,
+
+# backup pool dump database
+ backupPool => true,
+
+# backup metadata only
+# WARNING: if you backup metadata only, set $config{usesnap} = false;
+ backupMeta => true,
+ 
+);
+

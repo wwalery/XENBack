@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+#Full backup
+
+use vars qw(%config %job);
+
+%job = (
+
+ jobName => "vmhost-01: full backup",
+
+ fullBackup => true,
+
+ Selected => ['SysRCD','sap-auto','crm01'],
+);
+

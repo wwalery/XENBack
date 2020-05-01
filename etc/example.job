@@ -1,0 +1,47 @@
+#!/usr/bin/perl
+#Sample Job File
+
+use vars qw(%config %job);
+
+%job = (
+
+ jobName => "Test Job",
+
+# $type:
+# if "full" VM names included in @Selected array are Excluded from Backup.
+# If "part" VM names included in @Selected array are names of VM to backup.
+# If "tag" VM selected from tags listed in  @Selected array, prefixed with "XENBack:" e.g. "XENBack:test".
+# In case of selective job, Guests are backed up in the order specified in the array.
+
+ type => "part",
+
+ Selected => ['test'],
+
+# save MAC addresses for all VM interfaces 
+ saveMAC => true,
+ 
+# backup host configuration and software
+ backupHost => false,
+
+# backup pool dump database
+ backupPool => true,
+
+# backup metadata only
+# WARNING: if you backup metadata only, set $config{usesnap} = false;
+ backupMeta => false,
+ 
+);
+
+#Override default Snapshot behavior
+$config{usesnap} = true;
+$config{quiesce} = true;
+
+#Override mail Options:
+$config{mailNotification} = true;
+
+#mail to
+$config{MailTo} = "backup-admin\@example.com";
+
+#mail from
+$config{MailFrom} = "vmhost-01\@example.com";
+

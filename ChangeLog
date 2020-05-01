@@ -1,0 +1,30 @@
+XENBack (c) 2012,2016,2020
+	Walery Wysotsky <xenback@wysotsky.info>
+
+2020-05-01 v.2.1.0 Walery Wysotsky <xenback@wysotsky.info>
+* change package manager to Carton
+
+2016-03-02 v.2.0.0 Walery Wysotsky <xenback@wysotsky.info>
+* remove localization (because use english only)
+* change job extension from .conf to .job
+* remove conf directory
+* rename ./job directory to ./etc
+* move xenback.conf to ./etc/
+* make install script for install configuration and jobs to /etc/xenback
+* load configuration and jobs from /etc/xenback
+
+2012-12-27 v.1.1.0 Walery Wysotsky <xenback@wysotsky.info>
+* use xe internal compression
+* change 'Elapsed time' output
+* save MAC addresses for VM (see example.conf)
+* backup host configuration and software (see example.conf)
+* backup pool dump database (see example.conf)
+* backup metadata only for VM (see example.conf)
+
+
+2012-08-27 v.1.0.0 Walery Wysotsky <xenback@wysotsky.info>
+* almost full rewrite
+* serious log support
+* detect removable disk 
+* email report in html
+* select VM by tag
